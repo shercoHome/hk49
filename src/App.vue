@@ -211,8 +211,8 @@ export default {
   },
   methods: {
     toCSFun() {
-      window.open("https://baidu.com");
-      // window.open("https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=206119&configID=1239&jid=8580125140&s=1&domain="+this.domain+"&type=new");
+      //window.open("https://baidu.com");
+       window.open("https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=206119&configID=1239&jid=8580125140&s=1&domain="+this.domain+"&type=new");
     }
   }
 };
