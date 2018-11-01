@@ -2,17 +2,17 @@
   <div id="app">
         <h1         @click="toCSFun" class="sx title">亚洲最全综合娱乐平台——【E尊国际】<i  v-show="!m" >，</i><br v-show="m" />特码赔率48.5倍！资金绝对安全！</h1>
         <h1         @click="toCSFun" class="sx title bk-blue">E尊国际：永远免费，高手齐聚，好料不断<i  v-show="!m" >，</i><br v-show="m" />请记住：{{domain}}</h1>
-        <WordBling  @click="toCSFun" class="sx" msg="香港挂牌|六合彩研究机构1号大楼" />
-        <KaiJiang   @click="toCSFun" class="sx" :kjData="forKJprops" />
-        <LogoDomain @click="toCSFun" class="sx" :domain="domain" />
+        <WordBling  @click.native="toCSFun" class="sx" msg="香港挂牌|六合彩研究机构1号大楼" />
+        <KaiJiang   @click.native="toCSFun" class="sx" :kjData="forKJprops" />
+        <LogoDomain @click.native="toCSFun" class="sx" :domain="domain" />
         <div        @click="toCSFun" class="sx pojie">
           <p>大师破解<label style="color:red">{{kj.issue+1}}期</label>，高手资料，一站齐全</p>
           <PoJie :pojie="pojie" />
         </div>
-        <LogoDomain @click="toCSFun" class="sx" :domain="domain" />
+        <LogoDomain @click.native="toCSFun" class="sx" :domain="domain" />
         <LiuYan :msgArr="msgArr"  />
-        <WeiXin     @click="toCSFun" class="sx" />
-        <WeiXin     @click="toCSFun" class="sx" :title="wxtitle" :isRight="true" />
+        <WeiXin     @click.native="toCSFun" class="sx" />
+        <WeiXin     @click.native="toCSFun" class="sx" :title="wxtitle" :isRight="true" />
         <br>
         <WXFooter :wxhao="wxhao" />
   </div>
@@ -211,8 +211,8 @@ export default {
   },
   methods: {
     toCSFun() {
-      //window.open("https://baidu.com");
-       window.open("https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=206119&configID=1239&jid=8580125140&s=1&domain="+this.domain+"&type=new");
+      window.open("https://baidu.com");
+       //window.open("https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=206119&configID=1239&jid=8580125140&s=1&domain="+this.domain+"&type=new");
     }
   }
 };

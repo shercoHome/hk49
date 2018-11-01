@@ -6,7 +6,7 @@
                     <img class="msg-img" :src="require('../assets/'+msg.img)" />
             </div>
             <div class="msg-right">
-                <p>{{msg.name}}<img class="zan" src="../assets/zan.jpg" /> 6881 </p>
+                <p>{{msg.name}}<img class="zan" src="../assets/zan.jpg" /> {{msg.zan}} </p>
                 <p>{{msg.talk}}</p>
                 <p>{{msg.time}}</p>
             </div>
