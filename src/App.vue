@@ -31,7 +31,7 @@ export default {
   name: "app",
   data() {
     return {
-      domain: "www.ezun85.com",
+      domain: "www.ez083.com",
       wxhao: "Ezlily188",
       wxtitle: "加微信得现金最高88888元",
       m: false,
