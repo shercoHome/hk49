@@ -1,5 +1,7 @@
 # hk49
 
+[Click to check the demo](/dist/index.html)
+
 ## 使用vue-cli 3 的Demo
 
 https://my.oschina.net/wangnian/blog/2051369
