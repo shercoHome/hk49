@@ -7,7 +7,7 @@
 
         <div  class="KaiJiang-up-add"  :key="i+100" v-show="i==6">+</div>
         <div  class="KaiJiang-up-result" :key="i">
-           <div class="u">{{d.num}}</div>
+           <div class="u" :class="color(d.num)">{{d.num}}</div>
            <div class="d">{{d.sx}}</div>
         </div>
        </template>
@@ -42,7 +42,22 @@ export default {
   },
   computed: {
   },
-  created() {}
+  created() {
+  },
+  methods:{
+    color(n){
+      
+      n=Number(n);
+      if([5,6,11,16,17,21,22,27,28,32,33,38,39,43,44,49].indexOf(n)>=0){
+        return "green";
+      }
+      if([3,4,9,10,14,15,20,25,26,31,36,37,41,42,47,48].indexOf(n)>=0){
+        return "blue";
+      }
+      return "red";
+
+    }
+  }
 };
 </script>
 
@@ -90,9 +105,18 @@ export default {
  background-color: red;
     padding: 3px;
        font-size: 18px;
-
+       color: #fff;
 
 }
+.KaiJiang-up-result .u.red{
+ background-color: red;
+ }
+ .KaiJiang-up-result .u.blue{
+ background-color: blue;
+ }
+ .KaiJiang-up-result .u.green{
+ background-color: green;
+ }
 .tips{
     font-size: 10px;
 }

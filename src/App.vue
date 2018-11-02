@@ -133,18 +133,23 @@ export default {
       var now = new Date();
       var year = now.getFullYear();
       var ss = year - 2008; //设定2008为初始年份
-      var ssc = ss % 12;
+      var ssc = ss % 12+1;
       var ssyear = "鼠牛虎兔龙蛇马羊猴鸡狗猪"; //new Array("子鼠","丑牛","寅虎","卯兔","辰龙","巳蛇","午马","未羊","申猴","酉鸡","戌狗","亥猪");
-      ssyear = ssyear.slice(ssc) + ssyear.slice(0, ssc); //重排，第1个为当前年的生肖
-      ssyear = ssyear.split("");
+
+var arr1=ssyear.slice(0, ssc).split("").reverse();
+var arr2=ssyear.slice(ssc).split("").reverse();
+
+var ssyear= arr1.concat(arr2); //重排，第1个为当前年的生肖
+
+     // ssyear = ssyear.split("");
       var result = [];
       for (var ele of this.kj.d) {
 
-        ele = ele < 10 ? "0" + ele : "" + ele;
-
+        ele=""+ele;
+        ele = (ele < 10  && ele.indexOf("0")!=0) ? "0" + ele : "" + ele;
+  
         var xx = (ele % 12) - 1;
         xx = xx < 0 ? 11 : xx;
-
         result.push({
           num: ele,
           sx: ssyear[xx]
@@ -187,7 +192,6 @@ export default {
       .get("re.txt")
       .then(function(response) {
         // handle success
-        console.log(response);
         var re = response.data; //122|45|1|15|5|39|47|43|10|30|二|21点30分
         var re = re.split("|");
         that.kj = {
