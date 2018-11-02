@@ -1,5 +1,9 @@
 # hk49
 
+*First:
+[Click to the HK49 git pages](https://shercohome.github.io/hk49/)
+
+*Second:
 [Click to check the demo](/dist/index.html)
 
 ## 使用vue-cli 3 的Demo
